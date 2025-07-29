@@ -85,8 +85,6 @@ services:
 
 ## 🚀Run the Environment :
 
-In your vscode terminal 
-
 1)build and start all services;
 docker-compose up --build
 
