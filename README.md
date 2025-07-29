@@ -22,31 +22,7 @@ The project is deployed using Docker Compose, running multiple services in isola
 
 #📁 Project Structure :
 
-├── CMakeLists.txt
-├── build
-│   ├── CMakeCache.txt
-│   └── CMakeFiles
-├── build_log.txt
-├── client
-│   ├── CMakeLists.txt
-│   ├── Dockerfile
-│   └── client.cpp
-├── cpptools-linux-arm64.vsix
-├── docker-compose.yml
-├── extensions.txt
-├── protos
-│   ├── helloworld.grpc.pb.cc
-│   ├── helloworld.grpc.pb.h
-│   ├── helloworld.pb.cc
-│   ├── helloworld.pb.h
-│   └── helloworld.proto
-├── server
-│   ├── CMakeLists.txt
-│   ├── Dockerfile
-│   ├── entrypoint.sh
-│   └── server.cpp
-└── third_party
-    └── grpc
+![gRPC Flow](https://uml.planttext.com/plantuml/png/XPAnJiCm48RtUufJftO8TAmOK55IYMwe7HY08N5EKTJKv_gSCA2yEtOS6bg1UeE7-x-xttVsMbnkNNji85UEBMRKKSE6B83cad2MiJgGnMSMDyClG1yNGif7mq8_sgHNrgX4o7OUKgnTNckolx4GRzNk9SNzGBthUSJlb36B3ynb5CuL_LyMggb9kriMwK1vYuXF5b7urqBvy_OKhrJWDjk4zXCV-_lqLVCUUe3pdZ597WE43_Ya58bWL-TOMFxqNN1ks3fSBLVB1GGem74fdj-KjHEyzszMj9MWS6iLORW1nAakyJtfKd3OnevEBOc3KGlOM765YM4j16kV2t_a6m00)
 
 #🐋 Dockerfile :
 
