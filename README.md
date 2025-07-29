@@ -27,19 +27,19 @@ The project is deployed using Docker Compose, running multiple services in isola
 
 
 
-## 🐋Dockerfile :
+## 🐋 Dockerfile :
 
-// Create a "Dockerfile" in the root of your project.
-FROM gcc::latest
+```dockerfile
+# Create a "Dockerfile" in the root of your project.
+FROM gcc:latest
 
-//Install packages
+# Install packages
 RUN apt-get update && apt-get install -y \
     build-essential cmake git protobuf-compiler libprotobuf-dev libgrpc++-dev
 
 WORKDIR /app
 
-//Copy your project files
-
+# Copy your project files
 COPY proto ./proto
 COPY server/server.cpp ./server.cpp
 COPY server/CMakeLists.txt ./CMakeLists.txt
@@ -47,8 +47,10 @@ COPY server/CMakeLists.txt ./CMakeLists.txt
 RUN mkdir build && cd build && cmake .. && make
 
 CMD ["./build/server"]
+```
+## ⚙️docker-compose.yml :
 
-## ⚙️docker-compose.yml:
+```docker-compose.yml
 
 version: '3'
 services:
@@ -70,6 +72,16 @@ services:
     ports:
       - "8080:8080"  # Code Server için
 
+
+  grpc-client:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+    depends_on:
+      - grpc-server
+    ports:
+      - "8080:8080"  # Code Server için
+```
 
 ## 🚀Run the Environment :
 
