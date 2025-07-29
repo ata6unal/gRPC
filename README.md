@@ -27,7 +27,7 @@ The project is deployed using Docker Compose, running multiple services in isola
 
 
 
-## 🐋 Dockerfile :
+## 🐋Dockerfile :
 
 ```dockerfile
 # Create a "Dockerfile" in the root of your project.
