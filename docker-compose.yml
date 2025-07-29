@@ -1,0 +1,19 @@
+version: '3'
+services:
+  grpc-server:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    container_name: grpc-server
+    ports:
+      - "50052:50051"
+      - "8081:8081"  # Code Server için
+
+  grpc-client:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+    depends_on:
+      - grpc-server
+    ports:
+      - "8080:8080"  # Code Server için
