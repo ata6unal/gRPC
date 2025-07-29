@@ -1,0 +1,8 @@
+cpptools-linux-arm64.vsix
+build/
+*.log
+*.vsix
+proto/*.pb.*
+proto/*grpc.pb.*
+
+
