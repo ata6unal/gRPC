@@ -22,7 +22,8 @@ The project is deployed using Docker Compose, running multiple services in isola
 
 #📁 Project Structure :
 
-![gRPC Flow](https://hizliresim.com/ju8bvh1)
+![Uygulama Görseli](https://i.imgur.com/Irwg0Ud.png)
+
 
 
 
