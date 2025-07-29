@@ -95,11 +95,15 @@ services:
 #🚀 Run the Environment :
 
 In your vscode terminal 
+
 1)build and start all services;
 docker-compose up --build
+
 2)Access code-server in your browser;
 http://localhost:8080
+
 (**I didn't made a password for this project but you can create one if you want**)
+
 3)View client output in logs or terminal
 
 
@@ -107,20 +111,21 @@ http://localhost:8080
  , run your server and client in separate containers.
 
 #📌 Flow of Execution :
+
 [1] docker-compose up --build
-    ↓
+
 [2] Protobufs compiled via protoc
-    ↓
+    
 [3] gRPC Server boots on port [50051]
-    ↓
+    
 [4] Client.cpp connects to grpc-server:50051
-    ↓
+    
 [5] Sends **SayHello** request (with name)
-    ↓
+    
 [6] Server handles request in HelloServiceImpl
-    ↓
+    
 [7] Returns **Hello, Ata** response
-    ↓
+    
 [8] Client prints response to terminal
 
 #🎨 Deployment Diagram (PUML) :
@@ -144,9 +149,13 @@ node "Docker Host" {
 }
 
 Developer --> IDE : Access via browser (port 8080)
+
 IDE --> Server : Edits / Debugs source code
+
 Client --> Server : Sends gRPC Request
+
 Server --> Client : Sends gRPC Response
+
 @enduml
 
 #📚 Use This Project As a Template
@@ -161,13 +170,19 @@ Experimenting with remote code editing using code-server
 Learning how to compile Protobuf & gRPC from CMake or shell
 
 #✅Requirements
+
 -Docker
+
 -Docker Compose
+
 -VS Code (for local editing)
+
 -PlantUML (optional for diagram rendering)
 
 📷 Sample Screenshots:
+
 https://snipboard.io/8AZMJ2.jpg
+
 https://snipboard.io/kDUXto.jpg
 
 
