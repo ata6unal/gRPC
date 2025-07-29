@@ -22,7 +22,9 @@ The project is deployed using Docker Compose, running multiple services in isola
 
 #📁 Project Structure :
 
-![gRPC Flow](https://uml.planttext.com/plantuml/png/XPAnJiCm48RtUufJftO8TAmOK55IYMwe7HY08N5EKTJKv_gSCA2yEtOS6bg1UeE7-x-xttVsMbnkNNji85UEBMRKKSE6B83cad2MiJgGnMSMDyClG1yNGif7mq8_sgHNrgX4o7OUKgnTNckolx4GRzNk9SNzGBthUSJlb36B3ynb5CuL_LyMggb9kriMwK1vYuXF5b7urqBvy_OKhrJWDjk4zXCV-_lqLVCUUe3pdZ597WE43_Ya58bWL-TOMFxqNN1ks3fSBLVB1GGem74fdj-KjHEyzszMj9MWS6iLORW1nAakyJtfKd3OnevEBOc3KGlOM765YM4j16kV2t_a6m00)
+![gRPC Flow](https://hizliresim.com/ju8bvh1)
+
+
 
 #🐋 Dockerfile :
 
@@ -107,32 +109,9 @@ http://localhost:8080
 #🎨 Deployment Diagram (PUML) :
 //It gives you a simpler visualize for the project with a PUML.
 
-@startuml
-actor Developer
+![gRPC Flow](https://uml.planttext.com/plantuml/png/XPAnJiCm48RtUufJftO8TAmOK55IYMwe7HY08N5EKTJKv_gSCA2yEtOS6bg1UeE7-x-xttVsMbnkNNji85UEBMRKKSE6B83cad2MiJgGnMSMDyClG1yNGif7mq8_sgHNrgX4o7OUKgnTNckolx4GRzNk9SNzGBthUSJlb36B3ynb5CuL_LyMggb9kriMwK1vYuXF5b7urqBvy_OKhrJWDjk4zXCV-_lqLVCUUe3pdZ597WE43_Ya58bWL-TOMFxqNN1ks3fSBLVB1GGem74fdj-KjHEyzszMj9MWS6iLORW1nAakyJtfKd3OnevEBOc3KGlOM765YM4j16kV2t_a6m00)
 
-node "Docker Host" {
-    node "Docker Compose" {
-        node "grpc-server container" {
-            [gRPC Server\n(server.cpp)] as Server
-        }
-        node "grpc-client container" {
-            [gRPC Client\n(client.cpp)] as Client
-        }
-        node "code-server container" {
-            [Web IDE\n(code-server)] as IDE
-        }
-    }
-}
 
-Developer --> IDE : Access via browser (port 8080)
-
-IDE --> Server : Edits / Debugs source code
-
-Client --> Server : Sends gRPC Request
-
-Server --> Client : Sends gRPC Response
-
-@enduml
 
 #📚 Use This Project As a Template
 You can use this project as a reference or base for:
