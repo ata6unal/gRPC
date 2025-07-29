@@ -1,7 +1,7 @@
-# 📦 C++ Development Environment with Docker & Docker Compose Guide 📦
+# 📦C++ Development Environment with Docker & Docker Compose Guide 📦
 
 
-#🧩 Project Purpose
+## 🧩Project Purpose
 This guide explains how to set up a portable C++ development environment using Docker, Dockerfile, and
 Docker Compose. Ideal for projects using gRPC, Protobuf etc.
 
@@ -11,7 +11,7 @@ It is designed to be:
 - Cross-platform: Using Docker to ensure consistency across environments.
 - Remote-developable: With optional `code-server` access via browser.
 
-#🛠️ Deployment Overview
+## 🛠️Deployment Overview
 
 The project is deployed using Docker Compose, running multiple services in isolated containers:
 
@@ -20,14 +20,14 @@ The project is deployed using Docker Compose, running multiple services in isola
 - (Optional) code-server: Runs VS Code IDE in the browser for remote development.
 
 
-#📁 Project Structure :
+## 📁Project Structure :
 
 ![Uygulama Görseli](https://i.imgur.com/Irwg0Ud.png)
 
 
 
 
-#🐋 Dockerfile :
+## 🐋Dockerfile :
 
 // Create a "Dockerfile" in the root of your project.
 FROM gcc::latest
@@ -48,7 +48,7 @@ RUN mkdir build && cd build && cmake .. && make
 
 CMD ["./build/server"]
 
-#⚙️ docker-compose.yml:
+## ⚙️docker-compose.yml:
 
 version: '3'
 services:
@@ -71,7 +71,7 @@ services:
       - "8080:8080"  # Code Server için
 
 
-#🚀 Run the Environment :
+## 🚀Run the Environment :
 
 In your vscode terminal 
 
@@ -89,7 +89,7 @@ http://localhost:8080
 //Build both of your server and client images, compile your .cpp files
  , run your server and client in separate containers.
 
-#📌 Flow of Execution :
+## 📌Flow of Execution :
 
 [1] docker-compose up --build
 
@@ -107,14 +107,14 @@ http://localhost:8080
     
 [8] Client prints response to terminal
 
-#🎨 Deployment Diagram (PUML) :
+## 🎨Deployment Diagram (PUML) :
 //It gives you a simpler visualize for the project with a PUML.
 
 ![gRPC Flow](https://uml.planttext.com/plantuml/png/XPAnJiCm48RtUufJftO8TAmOK55IYMwe7HY08N5EKTJKv_gSCA2yEtOS6bg1UeE7-x-xttVsMbnkNNji85UEBMRKKSE6B83cad2MiJgGnMSMDyClG1yNGif7mq8_sgHNrgX4o7OUKgnTNckolx4GRzNk9SNzGBthUSJlb36B3ynb5CuL_LyMggb9kriMwK1vYuXF5b7urqBvy_OKhrJWDjk4zXCV-_lqLVCUUe3pdZ597WE43_Ya58bWL-TOMFxqNN1ks3fSBLVB1GGem74fdj-KjHEyzszMj9MWS6iLORW1nAakyJtfKd3OnevEBOc3KGlOM765YM4j16kV2t_a6m00)
 
 
 
-#📚 Use This Project As a Template
+## 📚Use This Project As a Template
 You can use this project as a reference or base for:
 
 Writing your own gRPC microservices in C++
@@ -125,7 +125,7 @@ Experimenting with remote code editing using code-server
 
 Learning how to compile Protobuf & gRPC from CMake or shell
 
-#✅Requirements
+## ✅Requirements
 
 -Docker
 
@@ -135,7 +135,7 @@ Learning how to compile Protobuf & gRPC from CMake or shell
 
 -PlantUML (optional for diagram rendering)
 
-📷 Sample Screenshots:
+## 📷Sample Screenshots:
 
 https://snipboard.io/8AZMJ2.jpg
 
