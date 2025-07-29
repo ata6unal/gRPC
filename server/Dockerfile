@@ -40,7 +40,7 @@ ENV CMAKE_PREFIX_PATH=/usr/local
 
 # Uygulama dosyalarını kopyala
 WORKDIR /app
-COPY protos ./protos
+COPY protos/*.proto ./protos/
 COPY server/server.cpp .
 COPY server/CMakeLists.txt .
 
