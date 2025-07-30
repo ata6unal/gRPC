@@ -146,6 +146,11 @@ Learning how to compile Protobuf & gRPC from CMake or shell
 
 -PlantUML (optional for diagram rendering)
 
+## ⚠️For Windows users:
+ If `entrypoint.sh` fails to execute, please ensure that the file uses Unix-style (LF) line endings.
+ In VS Code, you can change this by clicking on "CRLF" in the bottom-right corner and selecting "LF".
+
+
 ## 📷Sample Screenshots:
 
 ![1](https://snipboard.io/8AZMJ2.jpg)
