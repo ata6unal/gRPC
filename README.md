@@ -75,21 +75,28 @@ services:
 
 ```
 
-## 🚀Run the Environment :
+## 🔐Code-Server Auth(optional)
+For development, auth is disabled by default.
 
-1)build and start all services;
+You can set a password with:
+```code-server --auth password```
+
+
+## 🚀QuickStart :
+
+####  Clone Project 
+```
+git clone https://github.com/ata6unal/gRPC.git
+cd gRPC
+```
+#### Start Services
+```
 docker-compose up --build
-
-2)Access code-server in your browser;
+```
+#### Open codes from browser (optional)
+```
 http://localhost:8080
-
-(**I didn't made a password for this project but you can create one if you want**)
-
-3)View client output in logs or terminal
-
-
-Build both of your server and client images, compile your .cpp files
- , run your server and client in separate containers.
+```
 
 ## 📌Flow of Execution :
 
@@ -137,21 +144,6 @@ Learning how to compile Protobuf & gRPC from CMake or shell
 
 -PlantUML (optional for diagram rendering)
 
-## 💥QuickStart :
-
-####  Clone Project 
-```
-git clone https://github.com/ata6unal/gRPC.git
-cd gRPC
-```
-#### Start Services
-```
-docker-compose up --build
-```
-#### Open codes from browser (optional)
-```
-http://localhost:8080
-```
 ## 📷Sample Screenshots:
 
 ![1](https://snipboard.io/8AZMJ2.jpg)
