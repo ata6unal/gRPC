@@ -44,6 +44,7 @@ COPY protos/*.proto ./protos/
 COPY server/server.cpp .
 COPY server/CMakeLists.txt .
 
+
 # Protobuf derleme
 RUN protoc -I=protos --cpp_out=protos --grpc_out=protos --plugin=protoc-gen-grpc=/usr/local/bin/grpc_cpp_plugin protos/helloworld.proto
 
