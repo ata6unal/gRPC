@@ -73,14 +73,6 @@ services:
       - "8080:8080"  # Code Server için
 
 
-  grpc-client:
-    build:
-      context: .
-      dockerfile: client/Dockerfile
-    depends_on:
-      - grpc-server
-    ports:
-      - "8080:8080"  # Code Server için
 ```
 
 ## 🚀Run the Environment :
