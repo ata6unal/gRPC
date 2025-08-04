@@ -163,8 +163,8 @@ Learning how to compile Protobuf & gRPC from CMake or shell
 
 **ATA ÜNAL**
 
-**ata6unal@gmail.com**
+**e-mail: ata6unal@gmail.com**
 
-**https://github.com/ata6unal**
+**github: https://github.com/ata6unal**
 
 
